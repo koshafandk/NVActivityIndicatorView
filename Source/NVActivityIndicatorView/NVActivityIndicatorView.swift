@@ -351,6 +351,12 @@ public typealias FadeOutAnimation = (UIView, @escaping () -> Void) -> Void
 /// Activity indicator view with nice animations
 public final class NVActivityIndicatorView: UIView {
     // swiftlint:disable identifier_name
+    /// Default circle spacing. Default value is 2.
+    public static var DEFAULT_CIRCLE_SPACING: CGFloat = 2
+
+    /// Default vertical inset from center. Default value is 0.
+    public static var DEFAULT_VERTICAL_INSET: CGFloat = 0
+
     /// Default type. Default value is .BallSpinFadeLoader.
     public static var DEFAULT_TYPE: NVActivityIndicatorType = .ballSpinFadeLoader
 

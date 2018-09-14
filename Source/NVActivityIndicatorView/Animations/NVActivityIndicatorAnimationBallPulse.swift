@@ -29,10 +29,10 @@ import UIKit
 
 class NVActivityIndicatorAnimationBallPulse: NVActivityIndicatorAnimationDelegate {
     func setUpAnimation(in layer: CALayer, size: CGSize, color: UIColor) {
-        let circleSpacing: CGFloat = 2
+        let circleSpacing: CGFloat = NVActivityIndicatorView.DEFAULT_CIRCLE_SPACING
         let circleSize: CGFloat = (size.width - 2 * circleSpacing) / 3
         let x: CGFloat = (layer.bounds.size.width - size.width) / 2
-        let y: CGFloat = (layer.bounds.size.height - circleSize) / 2
+        let y: CGFloat = (layer.bounds.size.height - circleSize) / 2 - NVActivityIndicatorView.DEFAULT_VERTICAL_INSET
         let duration: CFTimeInterval = 0.75
         let beginTime = CACurrentMediaTime()
         let beginTimes: [CFTimeInterval] = [0.12, 0.24, 0.36]
